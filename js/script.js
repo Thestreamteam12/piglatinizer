@@ -8,14 +8,19 @@
 $( document ).ready(function() {
   
 
-
+	$("#clickable").click(function(){
+		$("#output").append("")
+	});
 
 });
 
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
 
-
+function sentenceToPigLatin(sentence) {
+	
+	return sentence.split("");
+}
 
 
 
