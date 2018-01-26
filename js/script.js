@@ -9,7 +9,7 @@ $( document ).ready(function() {
   
 
 	$("#clickable").click(function(){
-		$("#output").append("")
+		$("#output").append("ay")
 	});
 
 });
