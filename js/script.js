@@ -5,28 +5,48 @@
 // CREATE THE FUNCTIONS BELOW
 
 // Document Ready Function. All of your jQuery should go in here. 
-$( document ).ready(function() {
-  
+$(document).ready(function() {
 
-	$("#clickable").click(function(){
-		$("#output").append("ay")
+
+
+	$("#clickable").click(function() {
+		var userInput = $(".type").val();
+		console.log(userInput);
+		$("p").html(userInput);
+
 	});
 
-});
+})
+// Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word.
 
 
-// Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
-
-function sentenceToPigLatin(sentence) {
+function wordToPigLatin(sentence){
+	var words = sentence.split("");
+	for(var i = 0; i < words.length; i++){
+		words[i] = wordToPigLatin(words[i]);
+	}
+	return words.join("");
 	
-	return sentence.split("");
 }
 
 
 
 
-// Create the sentenceToPigLatin function that takes a sentence as a parameter
-	//Loops through all the words in the sentence and transforms each word
-	//It should return a transfromed sentance
 
+// Create the sentenceToPigLatin function that takes a sentence as a parameter
+
+function consonantToPigLatin(word){
+	var firstLetter = messageArray.slice(0,2);
+	
+	return word + firstLetter + "ay";
+}
+
+//Loops through all the words in the sentence and transforms each word
+
+for (var count = 0; count < 4; count = count + 1){
+	console.log(count);
+}
+
+
+//It should return a transfromed sentance
 
